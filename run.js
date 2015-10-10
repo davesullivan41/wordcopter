@@ -5,6 +5,8 @@ var alphabet = require('./alphabet.js');
 //Main commands
 client.takeoff();
 alphabet.init(client);
+alphabet.drawM(client);
+alphabet.nextLetter(client);
 alphabet.drawL(client);
 alphabet.nextLetter(client);
 alphabet.drawH(client);
