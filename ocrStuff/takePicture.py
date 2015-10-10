@@ -21,6 +21,8 @@ from Foundation import NSObject
 from Foundation import NSTimer
 from PyObjCTools import AppHelper
 from pytesser import *
+#from Naked.toolshed.shell import execute_js, muterun_js
+
 
 
 class NSImageTest(NSObject):
@@ -78,7 +80,11 @@ class NSImageTest(NSObject):
      	text = image_to_string(im)
      	print "Hello"
      	print text
-     
+
+        response = os.system('node ../run.js ' + text)
+        print response
+
+
         # Will exit on next execution of quitMainLoop_()
         self.running = False
 
